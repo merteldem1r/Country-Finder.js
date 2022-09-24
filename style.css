@@ -1,0 +1,55 @@
+.col-3 img {
+    height: 120px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.neighbor {
+    cursor: pointer;
+    transition: transform .1s linear;
+}
+
+.neighbor:hover {
+    transform: translate(-7px, -7px);
+}
+
+#loading {
+    display: none;
+}
+
+
+/* Geolocation popup */
+.popup {
+    width: 175px;
+    padding: 10px;
+    z-index: 1000;
+    background-color: #E2E2E2;
+    opacity: 0;
+    pointer-events: none;
+
+    position: absolute;
+    right: 15px;
+    top: 50px;
+}
+
+#btnLocation:hover~.popup {
+    opacity: .90;
+    pointer-events: auto;
+}
+
+.popup::after {
+    content: "";
+    width: 0px;
+    height: 0px;
+    border-top: 10px solid transparent;
+    border-left: 10px solid transparent;
+    border-bottom: 10px solid #E2E2E2;
+    border-right: 10px solid transparent;
+    
+    position: absolute;
+    top: -17px;
+    right: 3px;
+}

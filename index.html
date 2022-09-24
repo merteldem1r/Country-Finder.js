@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countries API</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container my-5">
+
+        <div class="header">
+            <h1 style="opacity: 1; color: #0f64db;" class="mb-3">COUNTRIES API</h1>
+
+            <!-- looading icon -->
+            <div id="loading" class="spinner-border text-primary mt-2" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- errors box -->
+        <div id="errors">
+
+        </div>
+
+        <!-- inputs -->
+        <div class="card mg-3">
+            <div class="card-body">
+                <div class="input-group">
+                    <input id="txtSearch" class="form-control" type="text" placeholder="Write country name correctly">
+
+                    <button id="btnSearch" type="button" class="btn btn-primary">Search</button>
+
+                    <button id="btnLocation" class="btn btn-danger">
+                        <i class="fa-solid fa-location-crosshairs"></i>
+                    </button>
+                    <div class="popup">
+                        This button gonna show your country and neighboring countries
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- main country information -->
+        <div class="card mt-3 mb-3" id="country-details">
+
+        </div>
+
+        <!-- neighboring countries -->
+        <div class="card mb-3">
+            <div class="card-header">Neighboring Countries</div>
+
+            <div class="card-body">
+                <div id="neighbors" class="row">
+                    <span style="opacity: .7;">
+                        Here you will see the neighboring countries of the country you are looking for. Also you can
+                        select one
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
